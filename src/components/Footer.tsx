@@ -139,7 +139,7 @@ export function Footer() {
 
                         <div className="section-divider mt-10" />
 
-        <div className="py-2 container-max section-pad font-semibold flex flex-col  bg-[#1FFF1F]  items-center justify-between gap-3 text-xs text-black sm:flex-row sm:items-center">
+        <div className="py-2 container-max section-pad font-semibold flex flex-col  bg-[#1FFF1F] text-center items-center justify-between gap-3 text-xs text-black lg:flex-row lg:items-center">
           <a
   href="/" className="font-mono text-xs ">© {year} {siteConfig.fullName}. All rights reserved.</a>
           <p className="font-mono text-xs ">Designed & built with React, TypeScript & Tailwind CSS</p>

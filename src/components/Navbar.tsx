@@ -51,7 +51,7 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
           scrolled ? 'py-2' : 'py-4'
         }`}
       >
-        <div className="container-max section-pad">
+        <div className="container-max mx-2 lg:section-pad lg:mx-0">
           <nav
             className={`flex items-center justify-between rounded-full border px-4 py-2.5 transition-all duration-500 sm:px-6 ${
               scrolled

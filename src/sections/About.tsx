@@ -149,7 +149,7 @@ export function About() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-elevated text-accent">
                     <area.icon size={18} strokeWidth={1.6} />
                   </span>
-                  <span className="text-sm font-medium text-fg font-mono">{area.label}</span>
+                  <span className="text-xs lg:text-sm font-medium text-fg font-mono">{area.label}</span>
                 </motion.div>
               ))}
             </div>
