@@ -77,7 +77,7 @@ useEffect(() => {
 
   {/* WhatsApp */}
   <a
-    href="https://wa.me/923163078238"
+    href="https://wa.me/923163078238?text=Hi%20Shahrukh%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"

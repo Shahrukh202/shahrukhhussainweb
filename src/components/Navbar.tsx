@@ -39,21 +39,21 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
     };
   }, [open]);
 
-  // const handleNav = (id: string) => {
-  //   setOpen(false);
-  //   scrollToSection(id);
-  // };
-
   const handleNav = (id: string) => {
-  setOpen(false);
+    setOpen(false);
+    scrollToSection(id);
+  };
 
-  if (id === 'loader') {
-    window.location.reload();
-    return;
-  }
+//   const handleNav = (id: string) => {
+//   setOpen(false);
 
-  scrollToSection(id);
-};
+//   if (id === 'loader') {
+//     window.location.reload();
+//     return;
+//   }
+
+//   scrollToSection(id);
+// };
 
   return (
     <>
@@ -62,7 +62,7 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
           scrolled ? 'py-2' : 'py-4'
         }`}
       >
-        <div className="container-max mx-2 lg:section-pad md:section-pad lg:mx-0">
+        <div className="container-max mx-2 lg:section-pad md:section-pad md:mx-0 lg:mx-0">
           <nav
             className={`flex items-center justify-between rounded-full border px-4 py-2.5 transition-all duration-500 sm:px-6 ${
               scrolled

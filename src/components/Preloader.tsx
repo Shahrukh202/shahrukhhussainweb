@@ -47,7 +47,7 @@ export function Preloader() {
             },
           }}
           
-         className="bg-grid fixed inset-0 z-[99999] flex min-h-screen items-center justify-center overflow-hidden bg-[#090A0A]"
+         className="bg-grid fixed inset-0 z-[99999] flex min-h-screen items-center justify-center overflow-hidden bg-surface"
         >
           {/* Green background glow */}
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1FFF1F] opacity-[0.04] blur-[140px]" />
