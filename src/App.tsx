@@ -15,6 +15,7 @@ import { useTheme } from '@/hooks/useTheme';
 import { FaWhatsapp } from 'react-icons/fa';
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Preloader } from '@/components/Preloader';
 function App() {
   const { theme, toggle } = useTheme();
   const [showTop, setShowTop] = useState(false);
@@ -38,10 +39,13 @@ useEffect(() => {
     });
   };
   return (
+    <>
+      <Preloader />
     <div className="relative min-h-screen bg-surface text-fg">
       <CursorGlow />
       <Navbar theme={theme} toggleTheme={toggle} />
       <main>
+        
         <Hero />
         <ContainerScroll />
         <TechMarquee />
@@ -61,14 +65,14 @@ useEffect(() => {
   aria-label="Scroll to top"
   className={`animate-bounce flex h-11 w-11 items-center justify-center rounded-2xl border border-[#1FFF1F]/30 bg-card text-[#1FFF1F] transition-all duration-500 hover:scale-110 hover:bg-[#1FFF1F] hover:text-black ${
     showTop
-      ? 'translate-y-0 opacity-100'
-      : 'pointer-events-none translate-y-4 opacity-0'
+    ? 'translate-y-0 opacity-100'
+    : 'pointer-events-none translate-y-4 opacity-0'
   }`}
 >
   <ArrowUp
     size={25}
     className=""
-  />
+    />
 </button>
 
   {/* WhatsApp */}
@@ -78,12 +82,13 @@ useEffect(() => {
     rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"
     className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1FFF1F] text-black transition-all duration-300 hover:scale-110 hover:border-[#1FFF1F]"
-  >
+    >
     <FaWhatsapp size={30} />
   </a>
 
 </div>
     </div>
+    </>
   );
 }
 

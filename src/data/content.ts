@@ -8,19 +8,19 @@ import {
   Wrench,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import business from "../assets/wordpress web.png";
-import Academic from "../assets/academics website.png";
-import shopify1 from "../assets/shopify e-commerce website.png";
-import shopify2 from "../assets/shopify 4.png";
-import schoolweb from "../assets/school webiste.png";
-import wix from "../assets/finance website.png";
-import auto from '../assets/auto trader website.png';
-import shopify3 from '../assets/shopify 3.png';
-import businessword from '../assets/m365 wordpress website.png';
-import businessword1 from '../assets/keystone website.png';
-import security from '../assets/Security website.png';
-import devcoder from '../assets/devcoderweb.png';
-import businessword2 from '../assets/business wordpress website.png';
+import business from "../assets/wordpress web.webp";
+import Academic from "../assets/academics website.webp";
+import shopify1 from "../assets/shopify e-commerce website.webp";
+import shopify2 from "../assets/shopify 4.webp";
+import schoolweb from "../assets/school webiste.webp";
+import wix from "../assets/finance website.webp";
+import auto from '../assets/auto trader website.webp';
+import shopify3 from '../assets/shopify 3.webp';
+import businessword from '../assets/m365 wordpress website.webp';
+import businessword1 from '../assets/keystone website.webp';
+import security from '../assets/Security website.webp';
+import devcoder from '../assets/devcoderweb.webp';
+import businessword2 from '../assets/business wordpress website.webp';
 export type Service = {
   id: string;
   icon: LucideIcon;

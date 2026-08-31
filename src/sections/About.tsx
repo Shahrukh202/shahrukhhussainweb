@@ -5,7 +5,7 @@ import { Code2, Server, ShoppingCart, LayoutTemplate } from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 
-import shahrukh from '../assets/my profile new .png'
+import shahrukh from '../assets/my profile new .webp';
 
 const stats = [
   { value: '5+', label: 'Years Experience' },

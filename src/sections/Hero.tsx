@@ -27,7 +27,7 @@ export function Hero() {
     <section
       ref={ref}
       id="home"
-      className="relative  min-h-screen  items-center overflow-hidden pt-36 bg-grid"
+      className="relative  lg:min-h-screen  min-h-screen md:min-h-0 items-center overflow-hidden pt-36 bg-grid"
     >
       {/* Background layers */}
       <motion.div
@@ -54,10 +54,10 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span> */}
-            <Sparkles className="lg:w-3.5 lg:h-3.5 w-8 h-8 text-[#1FFF1F]" />
+            <Sparkles className="lg:w-3.5 lg:h-3.5 w-8 h-8 md:w-5 md:h-5 text-[#1FFF1F]" />
             {siteConfig.availability}
             <span className="text-fg">|</span>
-            <MapPin size={12} className="text-[#1FFF1F] lg:w-3.5 lg:h-3.5 w-8 h-8" />
+            <MapPin size={12} className="text-[#1FFF1F] lg:w-3.5 lg:h-3.5 w-8 h-8 md:w-5 md:h-5" />
             {siteConfig.location}
           </motion.div>
 {/* Role + headline */}
@@ -80,7 +80,7 @@ export function Hero() {
             initial={reduced ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08 }}
-            className="lg:mt-7 mt-4 font-display text-center text-[11vw]  lg:text-[8vw] font-bold leading-[0.92] tracking-tightest "
+            className="lg:mt-7 mt-4 font-display text-center text-[11vw]  lg:text-[8vw] md:text-[7vw] font-bold leading-[0.92] tracking-tightest "
           >
             <span className="block text-fg">Building Digital</span>
             <span className="block text-[#1FFF1F] mt-2">Experiences</span>
@@ -92,7 +92,7 @@ export function Hero() {
             initial={reduced ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.24 }}
-            className="lg:mt-7 mt-4 max-w- text-center text-[1.4rem] md:text-[2rem] text-subtle font-mono text-base text-subtle sm:text-xl"
+            className="lg:mt-7 mt-4 max-w- text-center text-[1.4rem] lg:text-[2rem] text-subtle font-mono text-base text-subtle sm:text-xl"
           >
             that convert visitors into customers
           </motion.p>
@@ -102,7 +102,7 @@ export function Hero() {
             initial={reduced ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.32 }}
-            className="lg:mt-9 mt-4 flex flex-col lg:flex-row justify-center items-center gap-4"
+            className="lg:mt-9 mt-4 flex flex-col md:flex-row lg:flex-row justify-center items-center gap-4"
           >
             <Magnetic as="button" onClick={() => scrollToSection('projects')} ariaLabel="View my work">
               <span className="inline-flex font-display tracking-[0.em] items-center gap-2 rounded-full bg-[#1FFF1F] px-7 py-3.5 text-sm font-semibold text-black shadow-[0_8px_30px_-8px_rgb(var(--accent-glow)/0.5)] transition-shadow hover:shadow-[0_12px_40px_-6px_rgb(var(--accent-glow)/0.7)]">
@@ -146,7 +146,7 @@ export function Hero() {
         >
           {heroStats.map((stat) => (
             <div key={stat.label} className="bg-card/60 p-5 ">
-              <div className="font-display text-2xl font-bold text-fg sm:text-3xl">{stat.value}</div>
+              <div className="font-display text-2xl md:text-xl font-bold text-fg lg:text-3xl">{stat.value}</div>
               <div className="mt-1 text-xs text-[#1FFF1F] font-mono">{stat.label}</div>
             </div>
           ))}

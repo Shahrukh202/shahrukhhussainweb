@@ -39,10 +39,21 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
     };
   }, [open]);
 
+  // const handleNav = (id: string) => {
+  //   setOpen(false);
+  //   scrollToSection(id);
+  // };
+
   const handleNav = (id: string) => {
-    setOpen(false);
-    scrollToSection(id);
-  };
+  setOpen(false);
+
+  if (id === 'loader') {
+    window.location.reload();
+    return;
+  }
+
+  scrollToSection(id);
+};
 
   return (
     <>
@@ -51,7 +62,7 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
           scrolled ? 'py-2' : 'py-4'
         }`}
       >
-        <div className="container-max mx-2 lg:section-pad lg:mx-0">
+        <div className="container-max mx-2 lg:section-pad md:section-pad lg:mx-0">
           <nav
             className={`flex items-center justify-between rounded-full border px-4 py-2.5 transition-all duration-500 sm:px-6 ${
               scrolled
@@ -75,7 +86,7 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
             </button>
 
             {/* Desktop nav */}
-            <ul className="hidden items-center gap-1 md:flex">
+            <ul className="hidden items-center gap-1 lg:flex">
               {NAV_ITEMS.map((item) => {
                 const isActive = active === item.id;
                 return (
@@ -102,12 +113,12 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
 
             <div className="flex items-center gap-2">
               <ThemeToggle theme={theme} toggle={toggleTheme} />
-              <DownloadCV variant="nav" className="hidden sm:inline-flex " />
+              <DownloadCV variant="nav" className="hidden lg:inline-flex " />
 
               {/* Mobile toggle */}
               <button
                 onClick={() => setOpen((v) => !v)}
-                className="inline-flex h-9 w-9 items-center hover:text-[#1FFF1F] justify-center rounded-full border border-[#1FFF1F]/30 bg-card text-fg md:hidden"
+                className="inline-flex h-9 w-9 items-center hover:text-[#1FFF1F] justify-center rounded-full border border-[#1FFF1F]/30 bg-card text-fg lg:hidden"
                 aria-label={open ? 'Close menu' : 'Open menu'}
                 aria-expanded={open}
               >
@@ -126,7 +137,7 @@ export function Navbar({ theme, toggleTheme }: { theme: 'dark' | 'light'; toggle
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-40 lg:hidden"
           >
             <div
               className="absolute inset-0 bg-surface/80 backdrop-blur-xl"
